@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8">
+    {% if is_post %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>fiji's blog</title>
+    {% endif %}
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/style.css" type="text/css" media="all" />
+  </head>
+  <body>
+    {% include '_layouts/header.liquid' %}
+    <main>
+      {% if is_post %}
+      {% include '_layouts/post.liquid' %}
+      {% else %}
+      {{ content }}
+      {% endif %}
+    </main>
+    <footer>
+        <span>CC BY-SA 4.0</span>
+        <span>-</span>
+        <a href="https://github.com/cobalt-org/cobalt.rs">Built with Cobalt</a>
+    </footer>
+  </body>
+</html>

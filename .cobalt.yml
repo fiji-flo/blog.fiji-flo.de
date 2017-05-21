@@ -1,0 +1,6 @@
+name: fiji\'s blog
+source: "./"
+dest: "build"
+ignore:
+  - .git/*
+  - build/*
