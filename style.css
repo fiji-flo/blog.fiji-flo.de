@@ -33,15 +33,36 @@ body > h1 {
     margin-bottom: 0px;
 }
 
+@media (max-width: 500px) {
+    body > h1 {
+        font-weight: 400;
+        font-size: 3rem;
+        border-bottom: 3px solid #000;
+        margin-bottom: 0px;
+    }
+}
+
 nav > ul.menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding: 0px;
+}
+
+@media (max-width: 500px) {
+    nav > ul.menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: column;
+        padding-left: 10%;
+    }
 }
 
 nav > ul.menu > li {
     list-style: none;
 }
+
 nav > ul.menu > li > a {
     color: #222;
 }
